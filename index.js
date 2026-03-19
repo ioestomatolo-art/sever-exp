@@ -10,8 +10,8 @@ app.use(express.json({ limit: "5mb" }));
 app.use(morgan("combined"));
 
 const PORT = parseInt(process.env.PORT || "3000", 10);
-const DATABASE_URL = process.env.DATABASE_URL || "";
-const SUPABASE_URL = process.env.SUPABASE_URL || "";
+const DATABASE_URL = process.env.DATABASE_URL || "postgresql://postgres:mexico28yesovas@db.gprkhjjpeaeapqragqlp.supabase.co:5432/postgres";
+const SUPABASE_URL = process.env.SUPABASE_URL || "https://gprkhjjpeaeapqragqlp.supabase.co";
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || "";
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 const API_TOKEN = process.env.API_TOKEN || "";

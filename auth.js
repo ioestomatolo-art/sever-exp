@@ -1,6 +1,6 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
-const SUPABASE_URL = "REEMPLAZA_CON_TU_SUPABASE_URL";
+const SUPABASE_URL = "https://gprkhjjpeaeapqragqlp.supabase.co";
 const SUPABASE_ANON_KEY = "REEMPLAZA_CON_TU_SUPABASE_ANON_KEY";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -17,7 +17,7 @@ function setMsg(text, ok = false) {
 async function goToApp() {
   const { data: sessionData } = await supabase.auth.getSession();
   if (sessionData && sessionData.session) {
-    window.location.href = "Formu.html";
+    window.location.href = "index.html";
   }
 }
 
@@ -40,7 +40,7 @@ btnLogin.addEventListener("click", async (ev) => {
 
     if (data && data.session) {
       setMsg("Acceso concedido.", true);
-      window.location.href = "Formu.html";
+      window.location.href = "index.html";
       return;
     }
 
